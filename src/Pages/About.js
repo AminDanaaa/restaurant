@@ -1,4 +1,7 @@
+import Cleaner from "./Cleaner.js";
+
 const renderFunction = (parentElement) => {
+    Cleaner.clear(parentElement);
     const testChild = document.createElement("p");
     testChild.textContent = "(testChild): This is from [About.js].";
     const testChild2 = document.createElement("p");
