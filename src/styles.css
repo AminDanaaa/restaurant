@@ -9,13 +9,14 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "DM Sans", sans-serif;
+    font-family: Garamond, serif;
 }
 
 * button:hover {
     cursor: pointer;
 }
 
+/* Header and its content */
 header {
     background-color: var(--palette-darkgreen);
     display: flex;
@@ -27,6 +28,17 @@ header {
 }
 
 .logo {
-    max-width: 100px;
+    max-width: 250px;
     flex: 1;
+    display: flex;
+    align-items: center;
 }
+
+.logo p {
+    color: white;
+    font-size: 2rem;
+    margin-left: 20px;
+    font-weight: bold;
+    user-select: none;
+}
+/* Header and its content */
