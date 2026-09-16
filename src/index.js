@@ -1,6 +1,27 @@
+// Imports section:
 import "./styles.css";
-import SVG from "./SVG/SVG.js";
+import "./logo.js";
+import Home from "./Pages/Home.js";
+import Menu from "./Pages/Menu.js";
+import About from "./Pages/About.js";
 
-const logo = document.querySelector(".logo");
-logo.innerHTML = SVG.logo;
-logo.innerHTML += "<h1>Dana Restaurant</h1>";
+// Constants section:
+const content = document.querySelector("#content");
+const btnHome = document.querySelector("#home");
+const btnMenu = document.querySelector("#menu");
+const btnAbout = document.querySelector("#about");
+
+// Main section:
+Home.render(content);
+
+btnHome.addEventListener('click', () => {
+    Home.render(content);
+});
+
+btnMenu.addEventListener('click', () => {
+    Menu.render(content);
+});
+
+btnAbout.addEventListener('click', () => {
+    About.render(content);
+});
