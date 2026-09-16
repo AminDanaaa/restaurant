@@ -1,0 +1,32 @@
+:root {
+    --main-background: #1B211A;
+    --palette-darkgreen: #628141;
+    --palette-green: #8BAE66;
+    --palette-beige: #EBD5AB;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "DM Sans", sans-serif;
+}
+
+* button:hover {
+    cursor: pointer;
+}
+
+header {
+    background-color: var(--palette-darkgreen);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    padding-right: 50px;
+}
+
+.logo {
+    max-width: 100px;
+    flex: 1;
+}

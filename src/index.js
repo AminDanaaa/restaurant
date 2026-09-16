@@ -1,3 +1,5 @@
 import "./styles.css";
+import SVG from "./SVG/SVG.js";
 
-console.log("Hello!");
+const logo = document.querySelector(".logo");
+logo.innerHTML = SVG.logo;
