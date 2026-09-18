@@ -11,12 +11,12 @@ const checkRequestedPageFunction = (requestedPage) => {
     }
 };
 
-const checkRequestedPageCaller = (requestedPage) => {
-    checkRequestedPageFunction(requestedPage);
-};
+
 
 const Optimizer = {
-    checkRequestedPage: checkRequestedPageCaller,
+    checkRequestedPage(requestedPage) {
+        checkRequestedPageFunction(requestedPage);
+    },
 };
 
 export default Optimizer;

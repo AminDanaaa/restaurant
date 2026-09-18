@@ -2,8 +2,12 @@ const clearFunction = (targetElement) => {
     targetElement.innerHTML = "";
 };
 
+
+
 const Cleaner = {
-    clear: clearFunction,
+    clear(targetElement) {
+        clearFunction(targetElement);
+    },
 };
 
 export default Cleaner;

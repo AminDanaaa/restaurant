@@ -2,17 +2,15 @@ import Cleaner from "./Cleaner.js";
 
 const renderFunction = (parentElement) => {
     Cleaner.clear(parentElement);
-    const testChild = document.createElement("p");
-    testChild.textContent = "(testChild): This is from [Menu.js].";
-    const testChild2 = document.createElement("p");
-    testChild2.textContent = "(testChild2): This is from [Menu.js]";
-    parentElement.append(testChild, testChild2);
+    parentElement.append("Menu");
 };
 
 
 
 const Menu = {
-    render: renderFunction,
+    render(parentElement) {
+        renderFunction(parentElement);
+    },
 };
 
 export default Menu;
