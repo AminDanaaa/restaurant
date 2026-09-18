@@ -15,6 +15,7 @@ contactLogo.innerHTML = SVG.mail;
 const contactInfoDiv = document.createElement("div");
 const contactInfoTitle = document.createElement("h3");
 const contactInfoText = document.createElement("h2");
+contactInfoTitle.classList.add("no-select");
 contactInfoTitle.textContent = aboutTexts.email
 contactInfoText.textContent = aboutTexts.emailAddress;
 contactInfoDiv.append(contactInfoTitle, contactInfoText);
@@ -27,6 +28,7 @@ const addressInfoDiv = document.createElement("div");
 const addressInfoTitle = document.createElement("h3");
 const addressInfoText = document.createElement("h2");
 addressInfoTitle.textContent = aboutTexts.address;
+addressInfoTitle.classList.add("no-select");
 addressInfoText.textContent = aboutTexts.addressFull;
 addressInfoDiv.append(addressInfoTitle, addressInfoText);
 addressDiv.append(addressLogo, addressInfoDiv);
