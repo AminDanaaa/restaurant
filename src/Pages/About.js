@@ -8,23 +8,29 @@ const btnAbout = document.querySelector("#about");
 // Structure of page {About} --Start
 const main = document.createElement("div");
 main.classList.add("about-content");
+
 const contactDiv = document.createElement("div");
 contactDiv.classList.add("contact-info");
 const contactLogo = document.createElement("div");
+contactLogo.classList.add("contact-logo");
 contactLogo.innerHTML = SVG.mail;
 const contactInfoDiv = document.createElement("div");
+contactInfoDiv.classList.add("contact-text");        // <-- added
 const contactInfoTitle = document.createElement("h3");
 const contactInfoText = document.createElement("h2");
 contactInfoTitle.classList.add("no-select");
-contactInfoTitle.textContent = aboutTexts.email
+contactInfoTitle.textContent = aboutTexts.email;
 contactInfoText.textContent = aboutTexts.emailAddress;
 contactInfoDiv.append(contactInfoTitle, contactInfoText);
 contactDiv.append(contactLogo, contactInfoDiv);
+
 const addressDiv = document.createElement("div");
 addressDiv.classList.add("address-info");
 const addressLogo = document.createElement("div");
+addressLogo.classList.add("address-logo");
 addressLogo.innerHTML = SVG.location;
 const addressInfoDiv = document.createElement("div");
+addressInfoDiv.classList.add("address-text");        // <-- added
 const addressInfoTitle = document.createElement("h3");
 const addressInfoText = document.createElement("h2");
 addressInfoTitle.textContent = aboutTexts.address;
@@ -32,11 +38,12 @@ addressInfoTitle.classList.add("no-select");
 addressInfoText.textContent = aboutTexts.addressFull;
 addressInfoDiv.append(addressInfoTitle, addressInfoText);
 addressDiv.append(addressLogo, addressInfoDiv);
+
 const crewDiv = document.createElement("div");
 crewDiv.classList.add("crew-box");
+
 main.append(contactDiv, addressDiv, crewDiv);
 // Structure of page {About} --End
-
 
 
 const renderFunction = (parentElement) => {

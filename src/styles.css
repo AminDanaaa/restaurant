@@ -255,6 +255,8 @@ footer a:hover {
 
 
 /* About Page content */
+
+/* --- Main column --- */
 .about-content {
     width: 70%;
     flex: 1;
@@ -262,11 +264,15 @@ footer a:hover {
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    min-width: 0;                 /* allows this to shrink if its parent is flex */
 }
 
+/* --- The three main boxes (contact, address, crew) --- */
 .about-content > div {
     width: 100%;
-    width: 650px;
+    max-width: 650px;             /* was a hard 650px — now shrinks below it */
+    min-width: 0;
+    box-sizing: border-box;       /* so padding-inline doesn't push past 100% */
     background-color: var(--palette-dark-gray);
     margin-block: 30px;
     border-radius: 15px;
@@ -276,37 +282,63 @@ footer a:hover {
     padding-inline: 40px;
 }
 
+/* --- Typography --- */
 .about-content h3 {
     color: var(--palette-medium-gray);
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
 }
 
 .about-content h2 {
     color: var(--palette-light-gray);
+    margin: 0;
 }
 
-.contact-info {
-    min-height: 200px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.contact-info > div {
-    margin-inline: 20px;
-}
-
+/* --- Contact & Address rows (shared layout) --- */
+.contact-info,
 .address-info {
     min-height: 200px;
+    min-width: 0;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    gap: 20px;                    /* replaces per-child margin-inline */
 }
 
+/* Direct children of the rows must opt into shrinking */
+.contact-info > div,
 .address-info > div {
-    margin-inline: 20px;
+    min-width: 0;
 }
 
+/* Logos: never shrink */
+.contact-logo,
+.address-logo {
+    flex: 0 0 auto;
+}
+
+/* Text wrappers: shrink, stack vertically, and clip overflow */
+.contact-text,
+.address-text {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+/* Leaf text: shrink with ellipsis instead of forcing the parent wider */
+.contact-text h2,
+.contact-text h3,
+.address-text h2,
+.address-text h3 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* --- Crew box --- */
 .crew-box {
     min-height: 800px;
+    min-width: 0;
 }
