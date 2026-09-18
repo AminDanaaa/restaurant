@@ -204,7 +204,7 @@ footer a:hover {
 .home-content {
     width: 100%;
     flex: 1;
-    border-radius: 30px;
+    border-radius: 40px 40px 10px 10px;
     background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.3)), url('./Media/background-landscape.webp');
     background-size: cover;
     background-position: center;
@@ -252,4 +252,57 @@ footer a:hover {
 
 /* About Page content */
 .about-content {
+    width: 70%;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.about-content > div {
+    width: 100%;
+    width: 650px;
+    background-color: var(--palette-dark-gray);
+    margin-block: 30px;
+    border-radius: 15px;
+    box-shadow: 15px 15px 30px #242424,
+                -15px -15px 30px #646464;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding-inline: 40px;
+}
+
+.about-content h3 {
+    color: var(--palette-medium-gray);
+    margin-bottom: 10px;
+}
+
+.about-content h2 {
+    color: var(--palette-light-gray);
+}
+
+.contact-info {
+    min-height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.contact-info > div {
+    margin-inline: 20px;
+}
+
+.address-info {
+    min-height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.address-info > div {
+    margin-inline: 20px;
+}
+
+.crew-box {
+    min-height: 800px;
 }
