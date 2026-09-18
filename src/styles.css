@@ -34,7 +34,7 @@ body {
 /* Header and its content */
 header {
     width: 100%;
-    min-height: 100px;
+    min-height: 110px;
     background-color: var(--palette-darkgreen);
     display: flex;
     flex-direction: row;
@@ -71,6 +71,7 @@ header .logo svg {
 }
 
 header nav {
+    margin-top: 18px;
     user-select: none;
     flex: 0 0 auto;
     display: flex;
@@ -120,6 +121,38 @@ header button {
 header button:hover {
     background-color: var(--palette-beige);
     transition-duration: 0.5s;
+}
+
+header .active-button {
+    background-color: var(--palette-beige);
+    position: relative;
+}
+
+/* Tooltip for active page button */
+.active-button::after {
+    content: "You are here!";
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+    background: #333;
+    color: #fff;
+    padding: 6px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    
+    /* Hidden by default */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+}
+
+.active-button:hover::after {
+    opacity: 1;
+    visibility: visible;
 }
 
 

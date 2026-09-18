@@ -13,22 +13,25 @@ const btnMenu = document.querySelector("#menu");
 const btnAbout = document.querySelector("#about");
 
 // Main section:
-Home.render(content);
+const initialize = () => {
+    btnHome.addEventListener('click', () => {
+        if (!Optimizer.checkRequestedPage("home")) {
+            Home.render(content);
+        }
+    });
+    btnMenu.addEventListener('click', () => {
+        if (!Optimizer.checkRequestedPage("menu")) {
+            Menu.render(content);
+        }
+    });
+    btnAbout.addEventListener('click', () => {
+        if (!Optimizer.checkRequestedPage("about")) {
+            About.render(content);
+        }
+    });
 
-btnHome.addEventListener('click', () => {
-    if (!Optimizer.checkRequestedPage("home")) {
-        Home.render(content);
-    }
-});
+    btnHome.classList.add("active-button");
+    Home.render(content);
+};
 
-btnMenu.addEventListener('click', () => {
-    if (!Optimizer.checkRequestedPage("menu")) {
-        Menu.render(content);
-    }
-});
-
-btnAbout.addEventListener('click', () => {
-    if (!Optimizer.checkRequestedPage("about")) {
-        About.render(content);
-    }
-});
+initialize();

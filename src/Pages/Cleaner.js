@@ -1,5 +1,11 @@
+
+
 const clearFunction = (targetElement) => {
     targetElement.innerHTML = "";
+};
+
+const clearActiveButtonFunction = () => {
+    document.querySelector(".active-button").classList.remove("active-button");
 };
 
 
@@ -7,6 +13,10 @@ const clearFunction = (targetElement) => {
 const Cleaner = {
     clear(targetElement) {
         clearFunction(targetElement);
+    },
+
+    clearActiveButton() {
+        clearActiveButtonFunction();
     },
 };
 
