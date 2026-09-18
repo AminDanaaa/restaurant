@@ -1,9 +1,10 @@
 // Imports section:
 import "./styles.css";
-import "./logo.js";
+import "./scripts/logo.js";
 import Home from "./Pages/Home.js";
 import Menu from "./Pages/Menu.js";
 import About from "./Pages/About.js";
+import Optimizer from "./scripts/Optimizer.js";
 
 // Constants section:
 const content = document.querySelector("#content");
@@ -15,13 +16,19 @@ const btnAbout = document.querySelector("#about");
 Home.render(content);
 
 btnHome.addEventListener('click', () => {
-    Home.render(content);
+    if (!Optimizer.checkRequestedPage("home")) {
+        Home.render(content);
+    }
 });
 
 btnMenu.addEventListener('click', () => {
-    Menu.render(content);
+    if (!Optimizer.checkRequestedPage("menu")) {
+        Menu.render(content);
+    }
 });
 
 btnAbout.addEventListener('click', () => {
-    About.render(content);
+    if (!Optimizer.checkRequestedPage("about")) {
+        About.render(content);
+    }
 });
