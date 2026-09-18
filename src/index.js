@@ -34,4 +34,6 @@ const initialize = () => {
     Home.render(content);
 };
 
+
+// Execute:
 initialize();

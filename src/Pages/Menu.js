@@ -1,18 +1,20 @@
 import Cleaner from "./Cleaner.js";
 const btnMenu = document.querySelector("#menu");
 
+
+
+// Structure of page {Home} --Start
+const main = document.createElement("div");
+// Structure of page {Home} --End
+
+
+
 const renderFunction = (parentElement) => {
     Cleaner.clearActiveButton();
     btnMenu.classList.add("active-button");
     Cleaner.clear(parentElement);
-    parentElement.append("Menu");
+    parentElement.append(main);
 };
-
-
-
-// Structure of page {Home}:
-const main = document.createElement("div");
-// Structure of page {Home} --End
 
 
 
