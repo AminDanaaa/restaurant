@@ -5,7 +5,7 @@ const btnAbout = document.querySelector("#about");
 
 
 
-// Structure of page {Home} --Start
+// Structure of page {About} --Start
 const main = document.createElement("div");
 main.classList.add("about-content");
 const contactDiv = document.createElement("div");
@@ -35,7 +35,7 @@ addressDiv.append(addressLogo, addressInfoDiv);
 const crewDiv = document.createElement("div");
 crewDiv.classList.add("crew-box");
 main.append(contactDiv, addressDiv, crewDiv);
-// Structure of page {Home} --End
+// Structure of page {About} --End
 
 
 
