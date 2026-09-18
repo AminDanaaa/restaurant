@@ -17,7 +17,7 @@ const renderFunction = (parentElement) => {
 };
 
 
-
+// Exported Object
 const Menu = {
     render(parentElement) {
         renderFunction(parentElement);

@@ -17,7 +17,7 @@ const renderFunction = (parentElement) => {
 };
 
 
-
+// Exported Object
 const Home = {
     render(parentElement) {
         renderFunction(parentElement);

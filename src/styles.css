@@ -1,8 +1,10 @@
 :root {
-    --main-background: #1B211A;
-    --palette-darkgreen: #628141;
+    --palette-charcoal-black: #121212;
+    --palette-dark-gray: #444444;
+    --palette-soft-gray: #888888;
+    --palette-medium-gray: #B0B0B0;
+    --palette-light-gray: #E0E0E0;
     --palette-green: #8BAE66;
-    --palette-beige: #EBD5AB;
 }
 
 * {
@@ -17,7 +19,7 @@
 }
 
 body {
-    background-color: var(--main-background);
+    background-color: var(--palette-dark-gray);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -35,7 +37,7 @@ body {
 header {
     width: 100%;
     min-height: 110px;
-    background-color: var(--palette-darkgreen);
+    background-color: var(--palette-charcoal-black);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -63,7 +65,7 @@ header .logo svg {
 }
 
 .logo h1 {
-    color: white;
+    color: var(--palette-green);
     font-size: 2rem;
     margin-left: 20px;
     font-weight: bold;
@@ -75,17 +77,17 @@ header nav {
     user-select: none;
     flex: 0 0 auto;
     display: flex;
-    gap: 0.7rem;
+    gap: 1rem;
 }
 
-@container header (max-width: 640px) {
+@container header (max-width: 758px) {
     header nav {
         flex: 1 1 100%;
         justify-content: space-around;
     }
 }
 
-@container header (max-width: 640px) {
+@container header (max-width: 758px) {
     header .logo {
         flex: 1 1 100%;
         display: flex;
@@ -93,38 +95,40 @@ header nav {
     }
 }
 
-@container header (max-width: 640px) {
+@container header (max-width: 758px) {
     header .logo h1 {
         display: flex;
         justify-content: center;
         align-items: center;
         border-radius: 10px;
-        background-color: white;
+        background-color: var(--palette-green);
         height: 55px;
         width: 300px;
-        color: var(--palette-darkgreen);
+        color: var(--palette-charcoal-black);
     }
 }
 
 header button {
-    min-width: 110px;
+    min-width: 140px;
     font-size: 1.1rem;
     font-weight: bold;
-    color: var(--main-background);
+    color: var(--palette-light-gray);
     padding: 8px 16px;
-    background-color: var(--palette-green);
-    border: 1px solid var(--palette-beige);
-    border-radius: 10px;
+    background-color: var(--palette-dark-gray);
+    border: 1px solid var(--palette-soft-gray);
+    border-radius: 5px 15px;
     transition-duration: 0.5s;
 }
 
 header button:hover {
-    background-color: var(--palette-beige);
+    background-color: var(--palette-soft-gray);
+    color: var(--palette-charcoal-black);
     transition-duration: 0.5s;
 }
 
 header .active-button {
-    background-color: var(--palette-beige);
+    background-color: var(--palette-soft-gray);
+    color: var(--palette-charcoal-black);
     position: relative;
 }
 
@@ -132,11 +136,11 @@ header .active-button {
 .active-button::after {
     content: "You are here!";
     position: absolute;
-    bottom: 115%;
+    bottom: 118%;
     left: 50%;
     transform: translateX(-50%);
     
-    background: #333;
+    background: #505050;
     color: #fff;
     padding: 6px 10px;
     border-radius: 4px;
@@ -163,18 +167,18 @@ footer {
     justify-content: center;
     align-items: center;
     user-select: none;
-    background-color: var(--palette-darkgreen);
+    background-color: var(--palette-charcoal-black);
     width: 100%;
     height: 40px;
 }
 
 footer p {
     font-size: 1.1rem;
-    color: var(--main-background);
+    color: var(--palette-soft-gray);
 }
 
 footer a {
-    color: var(--palette-beige);
+    color: var(--palette-light-gray);
 }
 
 footer a:hover {
