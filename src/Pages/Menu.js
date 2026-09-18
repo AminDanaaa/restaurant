@@ -5,6 +5,7 @@ const btnMenu = document.querySelector("#menu");
 
 // Structure of page {Home} --Start
 const main = document.createElement("div");
+main.classList.add("menu-content");
 // Structure of page {Home} --End
 
 

@@ -5,6 +5,7 @@ const btnAbout = document.querySelector("#about");
 
 // Structure of page {Home} --Start
 const main = document.createElement("div");
+main.classList.add("about-content");
 // Structure of page {Home} --End
 
 
