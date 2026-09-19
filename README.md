@@ -1,6 +1,9 @@
 # restaurant
 Restaurant web project from "The Odin Project"
 
+## You can check the project on Github Pages:
+[text](https://amindanaaa.github.io/restaurant/)
+
 ### A quick summary about the project:
 
 Practicing JS/HTML/CSS and Webpack by making a restaurant web page.
