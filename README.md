@@ -11,14 +11,19 @@ Maybe I'll improve this project later and use it on my Resume/Portfolio?
 
 ### Color palette used:
 Charcoal Black: #121212
---> Used for elements which should feel with higher z-index
++ Used for elements which should feel with higher z-index
+
 Dark Gray: #444444
---> Mostly for main backgrounds and neumorphic elements
++ Mostly for main backgrounds and neumorphic elements
+
 Soft Gray: #888888
---> Accent color, buttons , etc.
++ Accent color, buttons , etc.
+
 Medium Gray: #B0B0B0
---> Texts mostly Paragraphs
++ Texts mostly Paragraphs
+
 Light Gray: #E0E0E0
---> Texts mostly Headers
++ Texts mostly Headers
+
 Green: #8BAE66
---> The Healthy Logo!
++ The Healthy Logo!
