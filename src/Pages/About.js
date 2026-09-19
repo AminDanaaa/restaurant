@@ -42,6 +42,41 @@ addressDiv.append(addressLogo, addressInfoDiv);
 const crewDiv = document.createElement("div");
 crewDiv.classList.add("crew-box");
 
+// Owner Info
+const crewOwner = document.createElement("div");
+const crewOwnerPFP = document.createElement("div");
+crewOwnerPFP.classList.add("pfp", "pfp-owner");
+const crewOwnerText = document.createElement("h3");
+crewOwnerText.textContent = "Owner: Amin Dana";
+crewOwner.append(crewOwnerPFP, crewOwnerText);
+
+// Chef Info
+const crewChef = document.createElement("div");
+const crewChefPFP = document.createElement("div");
+crewChefPFP.classList.add("pfp", "pfp-chef");
+const crewChefText = document.createElement("h3");
+crewChefText.textContent = "Chef: The Flork";
+crewChef.append(crewChefPFP, crewChefText);
+
+// Waiter Info
+const crewWaiter = document.createElement("div");
+const crewWaiterPFP = document.createElement("div");
+crewWaiterPFP.classList.add("pfp", "pfp-waiter");
+const crewWaiterText = document.createElement("h3");
+crewWaiterText.textContent = "Waiter: Cute Monk";
+crewWaiter.append(crewWaiterPFP, crewWaiterText);
+
+// Delivery Info
+const crewDelivery = document.createElement("div");
+const crewDeliveryPFP = document.createElement("div");
+crewDeliveryPFP.classList.add("pfp", "pfp-delivery");
+const crewDeliveryText = document.createElement("h3");
+crewDeliveryText.textContent = "Delivery: Bunny Blaze";
+crewDelivery.append(crewDeliveryPFP, crewDeliveryText);
+
+// append crew boxes
+crewDiv.append(crewOwner, crewChef, crewWaiter, crewDelivery);
+
 main.append(contactDiv, addressDiv, crewDiv);
 // Structure of page {About} --End
 

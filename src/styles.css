@@ -325,6 +325,7 @@ footer a:hover {
     min-width: 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .contact-text h2,
@@ -337,8 +338,51 @@ footer a:hover {
 
 /* --- Crew box --- */
 .crew-box {
+    padding-block: 40px;
     min-height: 800px;
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    text-align: center;
+}
+
+.crew-box > div {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+}
+
+/* PFPs: never shrink */
+.pfp {
+    border: 2px solid var(--palette-light-gray);
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    background-size: cover;
+    background-position: center 30%; /* headshot-friendly */
+    background-repeat: no-repeat;
+}
+
+
+/* Set the images as PFPs */
+.pfp-owner {
+    background-image: url(./Media/PFPs/Owner.webp);
+}
+
+.pfp-chef {
+    background-image: url(./Media/PFPs/Chef.webp);
+}
+
+.pfp-waiter {
+    background-image: url(./Media/PFPs/Waiter.webp);
+}
+
+.pfp-delivery {
+    background-image: url(./Media/PFPs/Delivery.webp);
 }
 
 /* Change layout in mobile view */
@@ -349,11 +393,26 @@ footer a:hover {
         visibility: hidden;
     }
 
+    .contact-text,
+    .address-text {
+        align-items: normal;
+    }
+
     .contact-text h2,
     .contact-text h3,
     .address-text h2,
-    .address-text h3 {
+    .address-text h3
+    .crew-box h3 {
         min-width: 0;
         white-space: wrap;
+    }
+}
+
+@container about (max-width: 403px) {
+    .crew-box > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
     }
 }
