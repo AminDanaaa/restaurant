@@ -41,6 +41,8 @@ addressDiv.append(addressLogo, addressInfoDiv);
 
 const crewDiv = document.createElement("div");
 crewDiv.classList.add("crew-box");
+const crewDivTitle = document.createElement("h1");
+crewDivTitle.textContent = "The Crew";
 
 // Owner Info
 const crewOwner = document.createElement("div");
@@ -75,7 +77,7 @@ crewDeliveryText.textContent = "Delivery: Bunny Blaze";
 crewDelivery.append(crewDeliveryPFP, crewDeliveryText);
 
 // append crew boxes
-crewDiv.append(crewOwner, crewChef, crewWaiter, crewDelivery);
+crewDiv.append(crewDivTitle, crewOwner, crewChef, crewWaiter, crewDelivery);
 
 main.append(contactDiv, addressDiv, crewDiv);
 // Structure of page {About} --End
