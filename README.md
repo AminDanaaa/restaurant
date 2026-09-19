@@ -1,8 +1,8 @@
 # restaurant
 Restaurant web project from "The Odin Project"
 
-
 ### A quick summary about the project:
+
 Practicing JS/HTML/CSS and Webpack by making a restaurant web page.
 It's a part of "The Odin Project Web dev Java-Script Full Stack" course.
 A single page website with 3 tabs, switching between tabs using pure JS,
@@ -10,8 +10,8 @@ rendering DOM elements using pure JS.
 
 Maybe I'll improve this project later and use it on my Resume/Portfolio?
 
+### Current color palette in use:
 
-### current color palette in use:
 Charcoal Black: #121212
 + Used for elements which should feel with higher z-index
 
