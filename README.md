@@ -3,6 +3,7 @@ Restaurant web project from "The Odin Project"
 
 ## You can check the project on Github Pages:
 [Link to the Preview](https://amindanaaa.github.io/restaurant/)
+(Not ready for mobile devices yet!)
 
 ### A quick summary about the project:
 
