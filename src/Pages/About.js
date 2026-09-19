@@ -1,6 +1,6 @@
 import Cleaner from "./Cleaner.js";
 import SVG from "../SVG/SVG.js";
-import { aboutTexts } from "./Strings/Strings.js";
+import { aboutTexts } from "../Strings/Strings.js";
 const btnAbout = document.querySelector("#about");
 
 
@@ -15,7 +15,7 @@ const contactLogo = document.createElement("div");
 contactLogo.classList.add("contact-logo");
 contactLogo.innerHTML = SVG.mail;
 const contactInfoDiv = document.createElement("div");
-contactInfoDiv.classList.add("contact-text");        // <-- added
+contactInfoDiv.classList.add("contact-text");
 const contactInfoTitle = document.createElement("h3");
 const contactInfoText = document.createElement("h2");
 contactInfoTitle.classList.add("no-select");
@@ -30,7 +30,7 @@ const addressLogo = document.createElement("div");
 addressLogo.classList.add("address-logo");
 addressLogo.innerHTML = SVG.location;
 const addressInfoDiv = document.createElement("div");
-addressInfoDiv.classList.add("address-text");        // <-- added
+addressInfoDiv.classList.add("address-text");
 const addressInfoTitle = document.createElement("h3");
 const addressInfoText = document.createElement("h2");
 addressInfoTitle.textContent = aboutTexts.address;
@@ -42,14 +42,14 @@ addressDiv.append(addressLogo, addressInfoDiv);
 const crewDiv = document.createElement("div");
 crewDiv.classList.add("crew-box");
 const crewDivTitle = document.createElement("h1");
-crewDivTitle.textContent = "The Crew";
+crewDivTitle.textContent = aboutTexts.crewDivTitle;
 
 // Owner Info
 const crewOwner = document.createElement("div");
 const crewOwnerPFP = document.createElement("div");
 crewOwnerPFP.classList.add("pfp", "pfp-owner");
 const crewOwnerText = document.createElement("h3");
-crewOwnerText.textContent = "Owner: Amin Dana";
+crewOwnerText.textContent = aboutTexts.crewOwnerText;
 crewOwner.append(crewOwnerPFP, crewOwnerText);
 
 // Chef Info
@@ -57,7 +57,7 @@ const crewChef = document.createElement("div");
 const crewChefPFP = document.createElement("div");
 crewChefPFP.classList.add("pfp", "pfp-chef");
 const crewChefText = document.createElement("h3");
-crewChefText.textContent = "Chef: The Flork";
+crewChefText.textContent = aboutTexts.crewChefText;
 crewChef.append(crewChefPFP, crewChefText);
 
 // Waiter Info
@@ -65,7 +65,7 @@ const crewWaiter = document.createElement("div");
 const crewWaiterPFP = document.createElement("div");
 crewWaiterPFP.classList.add("pfp", "pfp-waiter");
 const crewWaiterText = document.createElement("h3");
-crewWaiterText.textContent = "Waiter: Cute Monk";
+crewWaiterText.textContent = aboutTexts.crewWaiterText;
 crewWaiter.append(crewWaiterPFP, crewWaiterText);
 
 // Delivery Info
@@ -73,7 +73,7 @@ const crewDelivery = document.createElement("div");
 const crewDeliveryPFP = document.createElement("div");
 crewDeliveryPFP.classList.add("pfp", "pfp-delivery");
 const crewDeliveryText = document.createElement("h3");
-crewDeliveryText.textContent = "Delivery: Bunny Blaze";
+crewDeliveryText.textContent = aboutTexts.crewDeliveryText;
 crewDelivery.append(crewDeliveryPFP, crewDeliveryText);
 
 // append crew boxes

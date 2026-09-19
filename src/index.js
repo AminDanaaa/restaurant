@@ -30,8 +30,8 @@ const initialize = () => {
         }
     });
 
-    btnAbout.classList.add("active-button");
-    About.render(content);
+    btnHome.classList.add("active-button");
+    Home.render(content);
 };
 
 

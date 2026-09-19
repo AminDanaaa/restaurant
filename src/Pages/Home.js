@@ -1,5 +1,5 @@
 import Cleaner from "./Cleaner.js";
-import { homeTexts } from "./Strings/Strings.js";
+import { homeTexts } from "../Strings/Strings.js";
 const btnHome = document.querySelector("#home");
 
 
