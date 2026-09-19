@@ -9,7 +9,7 @@ export const menuTexts = {
 
 export const aboutTexts = {
     email: "Our E-mail:",
-    emailAddress: "SomeRandomEmail@NotFake.com",
+    emailAddress: "Random @NotFake.com",
     address: "Our Address:",
-    addressFull: "Building 69, Some city in a random country, Random country on the Earth",
+    addressFull: "Building 420, City, Country",
 };
