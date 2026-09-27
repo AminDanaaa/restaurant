@@ -240,12 +240,6 @@ footer a:hover {
     max-width: 45%;
 }
 
-@container home (max-width: 720px) {
-    .home-content div {
-        max-width: 100%;
-    }
-}
-
 @container content (max-width: 720px) {
     .home-content {
         padding-block: 3rem;
@@ -261,6 +255,22 @@ footer a:hover {
 .home-content p {
     color: var(--palette-light-gray);
     font-size: 1.3rem;
+}
+
+@container home (max-width: 720px) {
+    .home-content div {
+        max-width: 100%;
+    }
+
+    .home-content h1 {
+        color: white;
+        font-size: 1.8rem;
+    }
+
+    .home-content p {
+        color: var(--palette-light-gray);
+        font-size: 1.2rem;
+    }
 }
 
 
@@ -378,7 +388,7 @@ footer a:hover {
 /* --- The three main boxes (contact, address, crew) --- */
 .about-content > div {
     width: 100%;
-    max-width: 650px;             /* was a hard 650px — now shrinks below it */
+    max-width: 650px;
     min-width: 0;
     box-sizing: border-box;       /* so padding-inline doesn't push past 100% */
     background-color: var(--palette-dark-gray);
@@ -510,7 +520,7 @@ footer a:hover {
     }
 }
 
-@container about (max-width: 509px) {
+@container about (max-width: 510px) {
     .about-content > div {
         padding: 1rem;
         padding-block: 1.5rem;
