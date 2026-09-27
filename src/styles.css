@@ -88,6 +88,7 @@ header nav {
     header nav {
         flex: 1 1 100%;
         justify-content: space-around;
+        margin-top: 0px;
     }
 
     header nav > button {
@@ -268,7 +269,7 @@ footer a:hover {
 .menu-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, 450px);
-    gap: 40px;
+    gap: 30px;
     justify-content: center;
     width: 90%;
 }
@@ -288,6 +289,18 @@ footer a:hover {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+}
+
+@container content (max-width: 702px) {
+    .menu-content {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-content > div {
+        width: 100%;
+    }
 }
 
 .menu-content > div:hover {
@@ -500,7 +513,7 @@ footer a:hover {
 @container about (max-width: 509px) {
     .about-content > div {
         padding: 1rem;
-        padding-block: 2.5rem;
+        padding-block: 1.5rem;
         flex-direction: column;
         text-align: center;
     }
@@ -528,9 +541,7 @@ footer a:hover {
         min-width: 0;
         white-space: wrap;
     }
-}
 
-@container about (max-width: 509px) {
     .crew-box > div {
         display: flex;
         flex-direction: column;
