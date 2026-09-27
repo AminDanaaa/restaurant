@@ -396,7 +396,7 @@ footer a:hover {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;                    /* replaces per-child margin-inline */
+    gap: 20px;
 }
 
 /* Direct children of the rows must opt into shrinking */
@@ -491,11 +491,28 @@ footer a:hover {
 }
 
 /* Change layout in mobile view */
+@container content (max-width: 510px) {
+    .about-content {
+        width: 100%;
+    }
+}
+
 @container about (max-width: 509px) {
+    .about-content > div {
+        padding: 1rem;
+        padding-block: 2.5rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-content h1 {
+        font-size: 2rem;
+    }
+
     .contact-logo,
     .address-logo {
         flex: 0 1 0;
-        visibility: hidden;
+        /* visibility: hidden; */
     }
 
     .contact-text,
@@ -513,7 +530,7 @@ footer a:hover {
     }
 }
 
-@container about (max-width: 403px) {
+@container about (max-width: 509px) {
     .crew-box > div {
         display: flex;
         flex-direction: column;
