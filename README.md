@@ -3,7 +3,13 @@ Restaurant web project from "The Odin Project"
 
 ## You can check the project on Github Pages:
 [Link to the Preview](https://amindanaaa.github.io/restaurant/)
-(Not ready for mobile devices yet!)
+
+## I've successfully ran the preview on:
++ Desktop / Chrome on Linux
++ Android Phone / Chrome / Samsung Browser
++ Android Tablet / Chrome
+
+### Hey, If you happen to check this project of mine and tried the preview and found some errors / bugs on the UI or the codes, please let me know :wink:
 
 ### A quick summary about the project:
 
