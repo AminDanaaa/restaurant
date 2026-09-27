@@ -89,6 +89,12 @@ header nav {
         flex: 1 1 100%;
         justify-content: space-around;
     }
+
+    header nav > button {
+        min-width: 0px;
+        flex: 1;
+        font-size: 0.9rem;
+    }
 }
 
 @container header (max-width: 758px) {
@@ -101,6 +107,7 @@ header nav {
 
 @container header (max-width: 758px) {
     header .logo h1 {
+        font-size: 1.7rem;
         display: flex;
         justify-content: center;
         align-items: center;
